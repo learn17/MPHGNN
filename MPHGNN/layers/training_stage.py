@@ -256,7 +256,6 @@ class GlobalSemanticFusion(nn.Module):
             for group_input_shape in input_shape
         ])
 
-        #if merge_mode in ["mean", "free"]:
         if merge_mode == "mean":
             global_input_shape = [-1, group_channels_list[-1]]
         elif merge_mode == "concat":
